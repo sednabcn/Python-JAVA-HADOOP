@@ -1,0 +1,3 @@
+hadoop fs -rm /home/user/hadoop/output
+yarn jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar grep input output 'dfs[a-z.]+' 
+hadoop fs -cat ./output/part-r-00000>grepp.txt

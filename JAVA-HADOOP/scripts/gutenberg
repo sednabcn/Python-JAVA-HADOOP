@@ -1,0 +1,5 @@
+hadoop fs -cp /home/user/hadoop/gutenberg-output /home/user/hadoop/gutenberg-output-01
+rm -R /home/user/hadoop/gutenberg-output
+yarn jar ./share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.2.jar wordcount /home/user/hadoop/gutenberg /home/user/hadoop/gutenberg-output 
+hadoop fs -cat ./gutenberg-output/part-r-00000 >gutenberg.txt
+
